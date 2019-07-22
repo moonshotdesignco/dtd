@@ -5,32 +5,48 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
-  /* color: hsl(0, 0%, 10%); */
-  /* background: hsl(0, 0%, 90%); */
+  font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace
 }
 
 .container {
   padding: 1rem;
 }
 
-.inner {
-  display: grid;
-  grid-template-columns: 7rem repeat(4, max-content);
-  grid-gap: 3rem;
+.section {
+  margin-bottom: 3rem;
 }
 
-.section:not(#skull) {
+.header .section {
+  width: 100%;
+}
+
+.header .section#skull {
+  max-width: 200px;
+  margin-top: 3rem;
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inner .section {
+  margin-right: 3rem;
   border-top: 1pt solid black;
   border-left: 1pt solid black;
   padding: 0 0.5rem;
 }
 
 p.sectionhead {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: bold;
   font-style: italic;
-  padding-bottom: 0.5rem;
+}
+
+p.sectioncaption {
+  font-size: 0.875rem;
+  font-style: italic;
+  padding-bottom: 1rem;
 }
 
 p.copy {
@@ -51,9 +67,13 @@ a:hover {
 
 @media (orientation: portrait) {
 
-  .inner {
-    grid-template-columns: 100%;
-    grid-template-rows: max-content;
+  .inner .section {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .header .section#skull {
+    max-width: initial;
   }
 
 }
