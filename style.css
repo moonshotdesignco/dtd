@@ -72,13 +72,13 @@ a:hover {
 
 @media (orientation: portrait) {
 
+  .header .section#skull {
+    max-width: 50%;
+  }
+
   .inner .section {
     width: 100%;
     margin-right: 0;
-  }
-
-  .header .section#skull {
-    max-width: initial;
-  }
+  }  
 
 }
